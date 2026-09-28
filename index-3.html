@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bade Rani - Web Developer, CSE Student and AI/ML Enthusiast portfolio.">
+  <meta property="og:title" content="Bade Rani | Web Developer">
+  <meta property="og:description" content="Portfolio of Bade Rani, a Computer Science Engineering student and aspiring Web Developer.">
+  <title>Bade Rani | Web Developer</title>
+  <style>
+    :root{--bg:#080b12;--card:#101621;--text:#eef3ff;--muted:#9ca8bb;--gold:#e6b85c;--blue:#5aa9ff;--line:rgba(255,255,255,.09);--max:1120px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(90,169,255,.12),transparent 30%),radial-gradient(circle at 15% 30%,rgba(230,184,92,.08),transparent 28%),var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
+    header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(8,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.35rem;font-weight:800;letter-spacing:.5px}.logo span{color:var(--gold)}
+    .navlinks{display:flex;gap:24px;align-items:center}.navlinks a{color:var(--muted);font-size:.92rem;transition:.25s}.navlinks a:hover,.navlinks a.active{color:var(--text)}
+    .resume-btn,.primary{background:linear-gradient(135deg,var(--gold),#f3d58b);color:#101010!important;font-weight:800;padding:10px 17px;border-radius:10px}
+    .menu{display:none;border:0;background:none;color:white;font-size:1.7rem}
+    section{padding:95px 0}.hero{min-height:100vh;display:flex;align-items:center;padding-top:130px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+    .eyebrow{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem;margin-bottom:15px}
+    h1{font-size:clamp(2.8rem,7vw,5.7rem);line-height:1.02;margin-bottom:18px}.gradient{background:linear-gradient(90deg,var(--text),var(--gold),var(--blue));-webkit-background-clip:text;color:transparent}
+    .role{font-size:1.35rem;color:#c9d4e6;margin-bottom:18px}.hero p,.about p{color:var(--muted);max-width:650px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border:1px solid var(--line);border-radius:10px;transition:.25s}.btn:hover{transform:translateY(-3px);border-color:rgba(230,184,92,.55)}
+    .hero-social{display:flex;gap:18px;color:var(--muted)}.hero-social a:hover{color:var(--gold)}
+    .code-card{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.3);animation:float 5s ease-in-out infinite}
+    .window{display:flex;gap:7px;margin-bottom:22px}.dot{width:10px;height:10px;border-radius:50%;background:#657086}
+    pre{white-space:pre-wrap;color:#cbd8ed;font-family:"SFMono-Regular",Consolas,monospace;font-size:.9rem}.key{color:#70b7ff}.str{color:#e8c875}.fn{color:#b995ff}
+    @keyframes float{50%{transform:translateY(-10px)}} .section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:2.35rem}.section-title p{color:var(--muted);margin-top:7px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}.glass{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:18px;padding:28px}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.stat strong{display:block;font-size:2rem;color:var(--gold)}.stat span{color:var(--muted);font-size:.9rem}
+    .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.skill-card h3{margin-bottom:18px}.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#cdd8e8;background:rgba(255,255,255,.025)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{position:relative}.tag{display:inline-block;color:var(--blue);font-size:.78rem;font-weight:700;margin-bottom:10px}.project h3{margin-bottom:10px}.project p{color:var(--muted);font-size:.92rem}.project ul{padding-left:18px;color:#b8c4d6;margin:14px 0}.tech{color:var(--gold);font-size:.82rem}.project-actions{display:flex;gap:10px;margin-top:18px}.disabled{opacity:.45;pointer-events:none}
+    .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cert{min-height:145px}.cert small{color:var(--gold)}.cert p{color:#b8c4d6;margin-top:7px}
+    .timeline{max-width:820px;margin:auto;border-left:2px solid rgba(230,184,92,.35);padding-left:28px}.timeline-item{position:relative;margin-bottom:28px}.timeline-item:before{content:"";position:absolute;left:-36px;top:8px;width:13px;height:13px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 5px rgba(230,184,92,.1)}.timeline-item span{color:var(--blue);font-size:.85rem}.timeline-item p{color:var(--muted)}
+    .highlights{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.highlight{text-align:center}.highlight b{font-size:1.35rem;color:var(--gold)}.highlight p{font-size:.85rem;color:var(--muted);margin-top:5px}
+    .training{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.training p{color:var(--muted)}.line{height:8px;background:#1c2533;border-radius:99px;margin-top:18px;overflow:hidden}.line i{display:block;height:100%;width:70%;background:linear-gradient(90deg,var(--blue),var(--gold))}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{text-align:center}.service .icon{font-size:2rem;margin-bottom:10px}.service p{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}.contact-list{display:grid;gap:14px}.contact-item{padding:15px;border:1px solid var(--line);border-radius:12px}.contact-item small{color:var(--muted);display:block}.contact-item a{color:#dbe7fa}
+    form{display:grid;gap:13px}input,textarea{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:#0b1019;color:white;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--blue)}textarea{min-height:145px;resize:vertical}.form-msg{color:var(--gold);font-size:.9rem;min-height:20px}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);text-align:center}.footer-links{display:flex;justify-content:center;gap:18px;margin-top:8px}.footer-links a:hover{color:var(--gold)}
+    #top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#121a27;color:white;display:none;z-index:999;cursor:pointer}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:900px){.navlinks{position:absolute;top:72px;right:4%;width:250px;display:none;flex-direction:column;align-items:stretch;padding:20px;background:#0d131e;border:1px solid var(--line);border-radius:15px}.navlinks.open{display:flex}.menu{display:block}.hero-grid,.about-grid,.training,.contact-grid{grid-template-columns:1fr}.projects,.certs{grid-template-columns:repeat(2,1fr)}.highlights{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:600px){section{padding:75px 0}.hero{padding-top:110px}.projects,.certs,.skill-groups,.services{grid-template-columns:1fr}.highlights{grid-template-columns:repeat(2,1fr)}h1{font-size:3rem}.stats{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+<header><nav class="container">
+  <a class="logo" href="#home">Bade <span>Rani</span></a>
+  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+  <div class="navlinks" id="navlinks">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#education">Education</a><a href="#achievements">Highlights</a><a href="#contact">Contact</a>
+    <a class="resume-btn" href="Bade_Rani_Resume.pdf" download>Resume</a>
+  </div>
+</nav></header>
+
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+  <div class="reveal">
+    <div class="eyebrow">Portfolio • 2026</div>
+    <h1>Hi, I'm <span class="gradient">Bade Rani</span></h1>
+    <div class="role"><span id="typed"></span></div>
+    <p>Building clean, responsive and user-focused web experiences while exploring the possibilities of AI and modern technology.</p>
+    <div class="actions"><a class="btn primary" href="#projects">View My Projects →</a><a class="btn" href="Bade_Rani_Resume.pdf" download>Download Resume</a><a class="btn" href="#contact">Contact Me</a></div>
+    <div class="hero-social"><a href="https://github.com/ranibade9032" target="_blank">GitHub</a><a href="https://linkedin.com/in/rani-bade-10a1613b" target="_blank">LinkedIn</a><a href="mailto:ranibade9032@gmail.com">Email</a></div>
+  </div>
+  <div class="code-card reveal"><div class="window"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<pre><span class="key">const</span> developer = {
+  <span class="str">name</span>: <span class="str">"Bade Rani"</span>,
+  <span class="str">role</span>: <span class="str">"Web Developer"</span>,
+  <span class="str">education</span>: <span class="str">"CSE"</span>,
+  <span class="str">skills</span>: [<span class="str">"HTML"</span>, <span class="str">"CSS"</span>,
+            <span class="str">"JavaScript"</span>, <span class="str">"Python"</span>],
+  <span class="str">interest</span>: <span class="str">"AI + Web"</span>,
+  <span class="str">status</span>: <span class="str">"Learning & Building"</span>
+};</pre></div>
+</div></section>
+
+<section id="about"><div class="container"><div class="section-title reveal"><h2>About Me</h2><p>A curious developer focused on learning by building.</p></div>
+<div class="about-grid"><div class="glass about reveal"><p>I’m a 3rd-year Computer Science & Engineering student at Dhanekula Institute of Engineering and Technology. I’m undergoing practical AI/ML training at Calibo AI Academy and enjoy building practical solutions using web technologies, Python and AI tools.</p><br><p>My interests include web development, AI/ML and software development. I’m continuously improving my problem-solving, communication and technical skills through hands-on learning and projects.</p></div>
+<div class="stats reveal"><div class="glass stat"><strong>8.51</strong><span>B.Tech CGPA / 10</span></div><div class="glass stat"><strong>6+</strong><span>Certifications</span></div><div class="glass stat"><strong>1+</strong><span>Major Project</span></div><div class="glass stat"><strong>3rd</strong><span>Year CSE</span></div></div></div></div></section>
+
+<section id="skills"><div class="container"><div class="section-title reveal"><h2>Technical Skills</h2><p>Tools and technologies I’m learning and using.</p></div><div class="skill-groups">
+<div class="glass skill-card reveal"><h3>Programming</h3><div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span></div></div>
+<div class="glass skill-card reveal"><h3>Web & Databases</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">MySQL</span></div></div>
+<div class="glass skill-card reveal"><h3>AI / ML</h3><div class="chips"><span class="chip">Generative AI</span><span class="chip">Prompt Engineering</span><span class="chip">Computer Vision</span><span class="chip">Data Mining</span><span class="chip">Data Warehousing</span></div></div>
+<div class="glass skill-card reveal"><h3>Tools & Core</h3><div class="chips"><span class="chip">GitHub</span><span class="chip">Google Colab</span><span class="chip">Google AI Studio</span><span class="chip">Gradio</span><span class="chip">OOP</span><span class="chip">Data Structures</span><span class="chip">Computer Networks</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="container"><div class="section-title reveal"><h2>Projects</h2><p>Practical work and future ideas.</p></div><div class="projects">
+<div class="glass project reveal"><span class="tag">AI + WEB APPLICATION</span><h3>Handwritten Math Problem Solver</h3><span class="tech">Python • Gemini API • Gradio • OpenCV</span><p>An AI-powered visual application that parses, analyzes and solves handwritten mathematical expressions from uploaded images.</p><ul><li>Image upload</li><li>Handwritten expression recognition</li><li>AI-powered analysis</li><li>Step-by-step solution</li><li>Interactive web interface</li></ul><div class="project-actions"><a class="btn disabled" href="#">GitHub</a><a class="btn disabled" href="#">Live Demo</a></div></div>
+<div class="glass project reveal"><span class="tag">FUTURE PROJECT</span><h3>Personal Expense Tracker</h3><span class="tech">HTML • CSS • JavaScript</span><p>A planned browser-based expense tracker focused on a simple and useful personal finance interface.</p><ul><li>Add and categorize expenses</li><li>Filtering</li><li>Monthly summary</li><li>Local storage</li></ul></div>
+<div class="glass project reveal"><span class="tag">FUTURE PROJECT</span><h3>AI Study Assistant</h3><span class="tech">HTML • CSS • JavaScript • GenAI concept</span><p>A planned productivity and learning dashboard for organizing study tasks and AI-assisted learning activities.</p><ul><li>Study notes</li><li>Task tracking</li><li>Question generation</li><li>Productivity dashboard</li></ul></div>
+</div></div></section>
+
+<section id="certifications"><div class="container"><div class="section-title reveal"><h2>Certifications</h2><p>Professional learning milestones.</p></div><div class="certs">
+<div class="glass cert reveal"><small>ORACLE</small><h3>OCI 2025 AI Foundations Associate</h3><p>Oracle</p></div>
+<div class="glass cert reveal"><small>AWS</small><h3>AWS Cloud Foundations</h3><p>AWS / EduSkills</p></div>
+<div class="glass cert reveal"><small>CYBERSECURITY</small><h3>Palo Alto Cybersecurity Infrastructure</h3><p>Palo Alto / EduSkills</p></div>
+<div class="glass cert reveal"><small>JAVA</small><h3>Java Developer Certification</h3><p>Infosys Springboard</p></div>
+<div class="glass cert reveal"><small>GENERATIVE AI</small><h3>Prompt Engineering Basics</h3><p>Google Cloud</p></div>
+<div class="glass cert reveal"><small>PROCESS MINING</small><h3>Process Mining Fundamentals</h3><p>Celonis</p></div>
+</div></div></section>
+
+<section id="education"><div class="container"><div class="section-title reveal"><h2>Education</h2><p>Academic journey.</p></div><div class="timeline">
+<div class="timeline-item reveal"><span>2024 – Present</span><h3>B.Tech — Computer Science & Engineering</h3><p>Dhanekula Institute of Engineering and Technology, Vijayawada • CGPA: 8.51/10</p></div>
+<div class="timeline-item reveal"><span>2022 – 2024</span><h3>Intermediate — MPC</h3><p>NRI Junior College, Vijayawada • 821/1000</p></div>
+<div class="timeline-item reveal"><span>Passed: 2021</span><h3>Secondary School Certificate</h3><p>GDETMCHS Patamata, Vijayawada • 504/600</p></div>
+</div></div></section>
+
+<section id="achievements"><div class="container"><div class="section-title reveal"><h2>Highlights</h2><p>Factual milestones from my learning journey.</p></div><div class="highlights">
+<div class="glass highlight reveal"><b>8.51/10</b><p>B.Tech CGPA</p></div><div class="glass highlight reveal"><b>AI/ML</b><p>Practical training</p></div><div class="glass highlight reveal"><b>6+</b><p>Certifications</p></div><div class="glass highlight reveal"><b>AI App</b><p>Handwritten math solver</p></div><div class="glass highlight reveal"><b>Web + AI</b><p>Hands-on technologies</p></div>
+</div></div></section>
+
+<section><div class="container"><div class="section-title reveal"><h2>AI/ML Training</h2><p>Calibo AI Academy</p></div><div class="glass training reveal"><div><h3>AI/ML Trainee</h3><p>Completing intensive training on machine learning workflows, model building and enterprise AI implementations.</p><div class="line"><i></i></div></div><div><h3>Learning Focus</h3><p>Machine learning workflows • Model building • Enterprise AI implementations • Practical problem solving</p></div></div></div></section>
+
+<section><div class="container"><div class="section-title reveal"><h2>What I Can Build</h2><p>Areas I’m developing skills in.</p></div><div class="services">
+<div class="glass service reveal"><div class="icon">⌘</div><h3>Responsive Websites</h3><p>Clean layouts that adapt across devices.</p></div><div class="glass service reveal"><div class="icon">⚡</div><h3>Interactive Web Apps</h3><p>Useful interfaces powered by JavaScript.</p></div><div class="glass service reveal"><div class="icon">✦</div><h3>AI-Powered Solutions</h3><p>Web experiences connected to AI concepts.</p></div><div class="glass service reveal"><div class="icon">◈</div><h3>Frontend UI</h3><p>Modern, accessible and user-focused interfaces.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="section-title reveal"><h2>Let's Connect</h2><p>Have an opportunity or want to say hello?</p></div><div class="contact-grid">
+<div class="contact-list reveal">
+<div class="contact-item"><small>Email</small><a href="mailto:ranibade9032@gmail.com">ranibade9032@gmail.com</a></div>
+<div class="contact-item"><small>Phone</small><a href="tel:+918790148973">+91 8790148973</a></div>
+<div class="contact-item"><small>Location</small><span>Vijayawada, Andhra Pradesh</span></div>
+<div class="contact-item"><small>LinkedIn</small><a href="https://linkedin.com/in/rani-bade-10a1613b" target="_blank">linkedin.com/in/rani-bade-10a1613b</a></div>
+<div class="contact-item"><small>GitHub</small><a href="https://github.com/ranibade9032" target="_blank">github.com/ranibade9032</a></div>
+</div>
+<div class="glass reveal"><form id="contactForm"><input id="name" type="text" placeholder="Your Name" required><input id="email" type="email" placeholder="Your Email" required><textarea id="message" placeholder="Your Message" required></textarea><button class="btn primary" type="submit">Send Message</button><div class="form-msg" id="formMsg"></div></form></div>
+</div></div></section>
+</main>
+
+<footer><div class="container">© 2026 Bade Rani. Built with HTML, CSS & JavaScript.<div class="footer-links"><a href="https://github.com/ranibade9032" target="_blank">GitHub</a><a href="https://linkedin.com/in/rani-bade-10a1613b" target="_blank">LinkedIn</a><a href="mailto:ranibade9032@gmail.com">Email</a></div></div></footer>
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+const typed=document.getElementById("typed");
+const roles=["Web Developer","CSE Student","AI/ML Enthusiast"];
+let ri=0,ci=0,deleting=false;
+function type(){
+  const word=roles[ri];
+  typed.textContent=deleting?word.slice(0,--ci):word.slice(0,++ci);
+  if(!deleting&&ci===word.length){deleting=true;setTimeout(type,1200);return}
+  if(deleting&&ci===0){deleting=false;ri=(ri+1)%roles.length}
+  setTimeout(type,deleting?55:85);
+} type();
+
+const menu=document.getElementById("menu"),nav=document.getElementById("navlinks");
+menu.onclick=()=>nav.classList.toggle("open");
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+const sections=document.querySelectorAll("section[id]"),links=document.querySelectorAll(".navlinks a[href^='#']");
+window.addEventListener("scroll",()=>{
+  let current="";
+  sections.forEach(s=>{if(scrollY>=s.offsetTop-130)current=s.id});
+  links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+current));
+  document.getElementById("top").style.display=scrollY>500?"block":"none";
+});
+document.getElementById("top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+
+document.getElementById("contactForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const msg=document.getElementById("formMsg");
+  if(!e.target.checkValidity()){msg.textContent="Please fill all fields correctly.";return}
+  msg.textContent="Thank you! Your message is ready, but this demo form has no backend.";
+  e.target.reset();
+});
+</script>
+</body>
+</html>
